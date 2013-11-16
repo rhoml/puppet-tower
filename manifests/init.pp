@@ -1,4 +1,11 @@
-# This is a placeholder class.
-class template {
-  anchor { 'Hello_World': }
+# Public: Install Tower.app into /Applications.
+#
+# Examples
+#
+#   include tower
+class tower {
+  package { 'tower':
+    source   => 'https://s3-eu-west-1.amazonaws.com/wuakidevops/thesetup/Common/Tower-1.4.18.zip',
+    provider => 'compressed_app'
+  }
 }
